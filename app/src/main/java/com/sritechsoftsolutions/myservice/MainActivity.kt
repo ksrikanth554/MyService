@@ -10,12 +10,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        var i=Intent(this@MainActivity,Myservice::class.java)
         btnstart.setOnClickListener {
-            var i=Intent(this@MainActivity,Myservice::class.java)
+
             startService(i)
         }
         btnstop.setOnClickListener {
-            var i=Intent(this@MainActivity,Myservice::class.java)
+
             stopService(i)
         }
     }
